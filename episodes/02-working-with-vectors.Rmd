@@ -1,5 +1,5 @@
 ---
-title: Introduction to R
+title: Working with Vectors
 source: Rmd
 teaching: 30
 exercises: 10
@@ -7,24 +7,17 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Assign values to objects in R.
-- Learn how to name objects.
-- Use comments to inform script.
-- Solve simple arithmetic operations in R.
-- Call functions and use arguments to change their default options.
-- Inspect the content of vectors and manipulate their content.
+- Recognise the different data types in R.
+- Create, inspect and manipulate the contents of a vector.
 - Subset and extract values from vectors.
 - Analyze vectors with missing data.
-- Define the following terms as they relate to R: object, vector, assign, call, function.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What is an object?
-- What is a function and how can we pass arguments to functions?
-- How can values be initially assigned to variables of different data types?
-- How can a vector be created What are the available data types?
+- What are the different data types in R?
+- What is a vector? How can a vector be created?
 - How can subsets be extracted from vectors?
 - How does R treat missing values?
 - How can we deal with missing values in R?
@@ -786,8 +779,7 @@ structures, we are ready to start working with the library catalog dataset and l
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use the assignment operator \<- to assign values to objects. You can now manipulate that object in R
-- R contains a number of functions you use to do something with your data. Functions automate more complicated sets of commands. Many functions are predefined, or can be made available by importing R packages
+- Define the following terms as they relate to R: object, vector, assign, call, function.
 - A vector is a sequence of elements of the same type. All data in a vector must be of the same type--character, numeric (or double), integer, and logical. Create vectors with c(). Use \[ \] to subset values from vectors.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

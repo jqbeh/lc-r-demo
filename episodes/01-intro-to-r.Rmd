@@ -1,8 +1,8 @@
 ---
 title: Introduction to R
 source: Rmd
-teaching: 50
-exercises: 30
+teaching: 30
+exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -36,63 +36,6 @@ exercises: 30
 
 ## Creating objects in R
 
-You can get output from R simply by typing math in the console:
-
-```{r, purl=FALSE}
-3 + 5
-7 * 2   # multiply 7 by 2
-sqrt(36) # take the square root of 36
-```
-
-However, to do useful and interesting things, we need to assign *values* to
-*objects*. To create an object, we need to give it a name followed by the
-assignment operator `<-`, and the value we want to give it:
-
-```{r, purl=FALSE}
-time_minutes <- 5        # assign the number 5 to the object time_minutes
-```
-
-`<-` is the assignment operator. It assigns values on the right to objects on
-the left. Here we are creating a symbol called `time_minutes` and *assigning* it
-the numeric value 5. Some R users would say "`time_minutes` *gets* 5."
-`time_minutes` is now a *numeric vector* with one element. Or you could say
-`time_minutes` is a numeric vector, and the first element is the number 5.
-
-When you assign something to a symbol, nothing happens in the console, but in
-the Environment pane in the upper right, you will notice a new object,
-`time_minutes`.
-
-In RStudio, typing <kbd>Alt</kbd> + <kbd>\-</kbd> (push <kbd>Alt</kbd> at the
-same time as the <kbd>\-</kbd> key) will write `<- ` in a single keystroke in a
-PC, while typing <kbd>Option</kbd> + <kbd>\-</kbd> (push <kbd>Option</kbd> at the
-same time as the <kbd>\-</kbd> key) does the same in a Mac.
-
-Objects can be given any name such as `x`, `checkouts`, or `isbn`. You want your
-object names to be explicit and not too long. Here are some tips for assigning
-values:
-
-- **Do not use names of functions that already exist in R:** There are some
-  names that cannot be used because they are the names of fundamental functions in
-  R (e.g., `if`, `else`, `for`, see
-  [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html)
-  for a complete list. In general, even if it's allowed, it's best to not use
-  other function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`). If in
-  doubt, check the help to see if the name is already in use.
-- **R is case sensitive**: `age` is different from `Age` and `y` is different
-  from `Y`.
-- **No blank spaces or symbols other than underscores**: R users get around this
-  in a couple of ways, either through capitalization (e.g. `myData`) or
-  underscores (e.g. `my_data`). It's also best to avoid dots (`.`) within an
-  object name as in `my.dataset`. There are many functions in R with dots in their
-  names for historical reasons, but dots have a special meaning in R (for methods)
-  and other programming languages.
-- **Do not begin with numbers or symbols**: `2x` is not valid, but `x2` is.
-- **Be descriptive, but make your variable names short**: It's good practice to
-  be descriptive with your variable names. If you're loading in a lot of data,
-  choosing `myData` or `x` as a name may not be as helpful as, say, `ebookUsage`.
-  Finally, keep your variable names short, since you will likely be typing them in
-  frequently.
-
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Objects vs. variables
@@ -105,6 +48,78 @@ are used synonymously. For more information see:
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+We will start by typing a simple mathematical expression in the console:
+
+```{r, purl=FALSE}
+3 + 5
+7 * 2   # multiply 7 by 2
+sqrt(36) # take the square root of 36
+```
+
+
+However, to do useful and interesting things, we need to assign **values** to
+`objects`. 
+
+To create an object, we need to provide:
+- a name (e.g. 'first_number')
+- a value (e.g. '1')
+- the assignment operator ('\<-')
+
+```{r, purl=FALSE}
+time_minutes <- 5        # assign the number 5 to the object time_minutes
+```
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## The assignment operator `<-`
+
+`<-` is the assignment operator. It assigns values on the right to objects on
+the left. Here we are creating a symbol called `time_minutes` and assigning it
+the numeric value 5. Some R users would say "`time_minutes` *gets* 5."
+`time_minutes` is now a *numeric vector* with one element.
+
+The ‘=’ works too, but is most commonly used in passing arguments to functions 
+(more on functions later). There are shortcuts for the R assignment operator:
+- Windows shortcut: <KBD>Alt</KBD>\+<KBD>\-</KBD>
+- Mac shortcut: <KBD>Option</KBD>\+<KBD>\-</KBD>
+
+:::::::::::::::::::::::::::::::::::::::::  
+
+
+When you assign something to a symbol, nothing happens in the console, but in
+the Environment pane in the upper right, you will notice a new object,
+`time_minutes`.
+
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Tips on naming objects
+
+Here are some tips for naming objects in R:
+
+- **Do not use names of functions that already exist in R:** There are some
+  names that cannot be used because they are the names of fundamental functions in
+  R (e.g., `if`, `else`, `for`, see
+  [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html)
+  for a complete list. In general, even if it's allowed, it's best to not use
+  other function names (e.g., `c`, `T`, `mean`, `data`, `df`, `weights`). If in
+  doubt, check the help to see if the name is already in use.
+- **R is case sensitive**: `age` is different from `Age` and `y` is different
+  from `Y`.
+- **No blank spaces or symbols other than underscores**: Instead, use capitalization 
+  (e.g. `myData`) or underscores (e.g. `my_data`). It's also best to avoid dots (`.`) 
+  within an object name as in `my.dataset`. There are many functions in R with dots in 
+  their names for historical reasons, but dots have a special meaning in R (for methods)
+  and other programming languages.
+- **Do not begin with numbers or symbols**: `2x` is not valid, but `x2` is.
+- **Be descriptive, but keep the names short**: Be descriptive with your variable names. 
+  If you're loading in a lot of data, choosing `myData` or `x` as a name may not be as 
+  helpful as, say, `ebookUsage`.
+
+:::::::::::::::::::::::::::::::::::::::::  
+
 
 ## Evaluating Expressions
 
@@ -175,6 +190,38 @@ changing the value of `time_minutes`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+## Removing objects from the environment
+
+To remove an object from your R environment, use the `rm()` function. Remove
+multiple objects with `rm(list = c("add", "objects", "here))`, adding the
+objects in `c()` using quotation marks. 
+
+To remove all objects, use `rm(list = ls())` or click the broom icon in the 
+Environment Pane, next to "Import Dataset."
+
+```{r, purl=FALSE, eval=FALSE}
+x <- 5
+y <- 10
+z <- 15
+rm(x)  # remove x
+rm(list =c("y", "z"))  # remove y and z
+rm(list = ls())  # remove all objects
+```
+
+:::::::::::::::::::::::::::::::::::::::  callout
+
+## Tip: Use whitespace for readability
+
+The white spaces surrounding the assignment operator `<-` are unnecessary. 
+However, including them does make your code easier to read. There are several 
+style guides you can follow, and choosing one is up to you, but consistency is key!
+
+A style guide we recommend is the [Tidyverse style guide](https://style.tidyverse.org/).
+
+:::::::::::::::::::::::::::::::::::::::  
+
+
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Exercise
@@ -201,7 +248,9 @@ my_area
 
 :::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::
+
+
 
 ## Comments
 
@@ -230,21 +279,6 @@ out one line, you can put the cursor at any location of that line (i.e. no need
 to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
 <kbd>C</kbd>.
 
-## Removing objects from the environment
-
-To remove an object from your R environment, use the `rm()` function. Remove
-multiple objects with `rm(list = c("add", "objects", "here))`, adding the
-objects in `c()` using quotation marks. To remove all objects, use `rm(list = ls())` or click the broom icon in the Environment Pane, next to "Import
-Dataset."
-
-```{r, purl=FALSE, eval=FALSE}
-x <- 5
-y <- 10
-z <- 15
-rm(x)  # remove x
-rm(list =c("y", "z"))  # remove y and z
-rm(list = ls())  # remove all objects
-```
 
 ## Functions and their arguments
 
@@ -324,9 +358,9 @@ call, and to specify the names of all optional arguments.  If you don't, someone
 reading your code might have to look up the definition of a function with
 unfamiliar arguments to understand what you're doing.
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+:::::::::::::::::::::::::::::::::::::::  discussion
 
-## Exercise
+## Discussion
 
 Type in `?round` at the console and then look at the output in the Help pane.
 What other functions exist that are similar to `round`?
@@ -334,6 +368,7 @@ How do you use the `digits` parameter in the round function?
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## Vectors and data types
 

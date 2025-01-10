@@ -327,7 +327,7 @@ By default, `na.rm` is set to `FALSE`, so evaluating a sum with missing
 values will return `NA`:
 
 ```{r, eval=TRUE, purl=FALSE}
-sum(3, 4, NA)                # 
+sum(3, 4, NA) 
 ```
 
 Even though we do not see the argument here, it is operating in the background,

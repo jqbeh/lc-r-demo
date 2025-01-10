@@ -475,6 +475,15 @@ or the local file system, but we won't be looking at these options in this lesso
   [Data Manipulation in
   R](https://link.springer.com/book/10.1007/978-0-387-74731-6).
 
+7. Other Carpentries R lesson:
+
+- [SWC – Programming with R](https://swcarpentry.github.io/r-novice-inflammation/)
+- [SWC – R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder)
+- [LC - Introduction to R and litsearchr (pre-alpha)](https://carpentries-incubator.github.io/lc-litsearchr/)
+- [Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/)
+- [Introduction to R and RStudio for Genomics](https://datacarpentry.org/genomics-r-intro/)
+
+
 ### Data
 
 If you need some data to play with, type `data()` in the console for a list of

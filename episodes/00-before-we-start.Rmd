@@ -437,6 +437,7 @@ It is also possible to install packages from other repositories, as well as Gith
 or the local file system, but we won't be looking at these options in this lesson.
 
 
+
 ## R Resources
 
 ### Learning R
@@ -487,14 +488,20 @@ mean(mtcars$mpg)
 sixCylinder <- mtcars[mtcars$cyl == 6, ]
 ```
 
-See also rdatamining.com's [list of free datasets](https://www.rdatamining.com/resources/data).
+See also rdatamining.com's [list of free datasets](https://www.rdatamining.com/resources/free-datasets).
 
 ### Cheat Sheets
+
+List of R Cheat Sheets:
 
 - [Base R Cheat Sheet](https://paulvanderlaken.files.wordpress.com/2017/08/base-r-cheetsheat.pdf) by Mhairi McNeill
 - [Data Transformation with dplyr Cheat Sheet](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf) by RStudio
 - [Data Wrangling with dplyr and tidyr Cheat Sheet](https://paulvanderlaken.files.wordpress.com/2017/08/ddplyr-cheatsheet-data-wrangling-plyr.pdf) by RStudio
 - [Complete list of RStudio cheatsheets](https://github.com/rstudio/cheatsheets/)
+
+You can also find the cheat sheets in RStudio by going to the <kbd>Help<kbd> panel then 
+clicking on the <kbc>Cheat Sheets<kbd> dropdown menu.
+
 
 ### Style guides
 

@@ -8,6 +8,7 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Navigate the RStudio interface.
+- Create an R project for project analysis.
 - Install additional packages using the packages tab.
 - Install additional packages using R code.
 

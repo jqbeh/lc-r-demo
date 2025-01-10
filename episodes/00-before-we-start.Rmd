@@ -147,7 +147,7 @@ knitr::include_graphics("fig/r+rstudio-analogy.jpg")
 
 :::::::::::::::::::::::::::::::::::::::::  discussion
 
-## Discussion: R and librarianship
+## Discussion: R for librarianship
 
 For at least the last decade, librarians have been grappling with the ways that
 the "data deluge" affects our work on multiple levels--collection development,

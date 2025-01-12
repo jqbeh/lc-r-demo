@@ -255,7 +255,7 @@ jump between the Script and Console Panes.
 :::::::::::::::::::::::::::::::::::::::::
 
 
-## Create an RStudio project
+## Creating an RStudio project
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
@@ -278,7 +278,7 @@ scripts.
 
 2. Select <kbd>New directory<kbd>, then `New project`.
 
-3. For "Directory name:" enter **library_carpentry**. This will be your **working 
+3. Enter your new project name e.g. `my_project`. This will be your **working 
    directory** for the rest of the day.
 
 4. Finally, click on <kbd>Create project<kbd>. Create a new file where we will type 

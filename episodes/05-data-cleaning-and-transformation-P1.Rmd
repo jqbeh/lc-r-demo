@@ -36,26 +36,15 @@ library(readr)
 books <- read_csv("./data/books.csv")
 ```
 
-### Getting set up
+## Getting set up
 
-#### Open your R Project file
+Make sure you have your Rproj and directories set up from the previous episode.
 
-If you have not already done so, open your R Project file (`library_carpentry.Rproj`) created in the `Before We Start` lesson.
-
-**If you did not complete that step** then do the following:
-
-- Under the `File` menu, click on `New project`, choose `New directory`, then
-  `New project`
-- Enter the name `library_carpentry` for this new folder (or "directory"). This
-  will be your **working directory** for the rest of the day.
-- Click on `Create project`
-- Create a new file where we will type our scripts. Go to File > New File > R
-  script. Click the save icon on your toolbar and save your script as
-  "`script.R`".
-- Copy and paste the below lines of code to create three new subdirectories and download the data:
+**If you have not completed that step**, run the following in your Rproj:
 
 ```{r create-dirs, eval=FALSE}
 library(fs)   # https://fs.r-lib.org/.  fs is a cross-platform, uniform interface to file system operations via R.
+setwd("your_working_directory")  # navigate to your local working directory
 dir_create("data")
 dir_create("data_output")
 dir_create("fig_output")
@@ -63,21 +52,17 @@ download.file("https://ndownloader.figshare.com/files/22031487",
               "data/books.csv", mode = "wb")
 ```
 
-#### Load the `tidyverse` and data frame into your R session
-
-Load the `tidyverse`
+Don't forget to also load the `tidyverse` package and data frame into your R session.
 
 ```{r load-data, purl=FALSE}
 library(tidyverse)
-```
 
-And the `books` data we saved in the previous lesson.
 
-```{r, eval=FALSE, purl=FALSE}
 books <- read_csv("data/books.csv")  # load the data and assign it to books
 ```
 
-### Transforming data with `dplyr`
+
+## Transforming data with `dplyr`
 
 We are now entering the data cleaning and transforming phase. While it is
 possible to do much of the following using Base R functions (in other words,
@@ -91,10 +76,8 @@ from your data. It pairs nicely with **`tidyr`** which enables you to swiftly
 convert between different data formats (long vs. wide) for plotting and
 analysis.
 
-`dplyr` is also part of the `tidyverse.` Let's make sure we are all on the same
-page by loading the `tidyverse` and the `books` dataset we downloaded earlier.
-
-We're going to learn some of the most common **`dplyr`** functions:
+`dplyr` is also part of the `tidyverse.` We're going to learn some of the most 
+common **`dplyr`** functions in this episode:
 
 - `rename()`: rename columns
 - `recode()`: recode values in a column
@@ -105,11 +88,12 @@ We're going to learn some of the most common **`dplyr`** functions:
 - `arrange()`: sort results
 - `count()`: count discrete values
 
+
 ### Renaming variables
 
 It is often necessary to rename variables to make them more meaningful. If you
-print the names of the sample `books` dataset you can see that some of the
-vector names are not particularly helpful:
+print the names of the `books` dataset you can see that some of the variable (column)
+names are not particularly helpful:
 
 ```{r renaming1, purl=FALSE}
 glimpse(books)  # print names of the books data frame to the console

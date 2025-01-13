@@ -86,6 +86,7 @@ tail(books)  # shows the last 6 rows
 ```{r, purl=FALSE, eval=FALSE}
 names(books)  # returns the column names (synonym of `colnames()` for 
 `data.frame` objects)
+glimpse(books)  # print names of the books data frame to the console
 ```
 
 ### Summary

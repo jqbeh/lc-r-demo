@@ -89,21 +89,19 @@ common **`dplyr`** functions in this episode:
 - `count()`: count discrete values
 
 
-### Renaming variables
+## Renaming variables
 
 It is often necessary to rename variables to make them more meaningful. If you
 print the names of the `books` dataset you can see that some of the variable (column)
-names are not particularly helpful:
+names are not particularly helpful or self-explanatory:
 
 ```{r renaming1, purl=FALSE}
 glimpse(books)  # print names of the books data frame to the console
 ```
 
 There are many ways to rename variables in R, but the `rename()` function
-in the `dplyr` package is the easiest and most straightforward. The new
-variable name comes first. See `help(rename)`.
-
-Here we rename the X245.ab variable. Make sure you assign the output to your
+in the `dplyr` package is the easiest and most straightforward. Here, we want 
+to rename the X245.ab variable. Make sure you assign the output to your
 `books` value, otherwise it will just print it to the console. In other words,
 we are overwriting the previous `books` value with the new one, with `X245.ab`
 renamed to `title`.
@@ -117,6 +115,15 @@ books <- rename(books,
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
+## Tips:
+
+When using the `rename()` function, the new variable name comes first.
+
+:::::::::::::::::::::::::::::::::::::::::  
+
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
 ### Side note:
 
 Where does `X245.ab` come from? That is the MARC field 245|ab. However,
@@ -124,8 +131,10 @@ because R variables cannot start with a number, R automatically inserted an X,
 and because pipes | are not allowed in variable names, R replaced it with a
 period.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+You can also rename multiple variables at once by running:
 
 ```{r, purl=FALSE}
 # rename multiple variables at once
@@ -147,7 +156,8 @@ books
 
 ### Rename `CALL...ITEM.`
 
-1. Use `rename()` to rename the `CALL...ITEM.` column to `callnumber2`. Remember to add the period to the end of the `CALL...ITEM.` value
+Use `rename()` to rename the `CALL...ITEM.` column to `callnumber2`. 
+Remember to add the period to the end of the `CALL...ITEM.` value
 
 :::::::::::::::  solution
 
@@ -162,11 +172,11 @@ books <- rename(books,
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Recoding values
+
+## Recoding values
 
 It is often necessary to recode or reclassify values in your data. For example,
-in the sample dataset provided to you, the `sub_collection` (formerly `BCODE1`)
-and `format` (formerly `BCODE2`) variables contain single characters.
+in the `books` dataset, the `subCollection` (formerly `BCODE1`) and `format` (formerly `BCODE2`) variables contain single characters.
 
 ```{r, echo=FALSE, fig.cap="Sub-Collection (formerly BCODE1) export from Sierra", fig.alt="Screen capture of window that says 'Select Me' with categories like Archival collections and Reference"}
 knitr::include_graphics("fig/BCODE1.png")
